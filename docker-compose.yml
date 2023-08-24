@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  rabbitmq:
+    image: "rabbitmq:management"  # Используем образ с установленным управлением
+    container_name: "rabbitmq"
+    ports:
+      - "5672:5672"  # Порт для AMQP
+      - "15672:15672"  # Порт для RabbitMQ Management UI
+    environment:
+      RABBITMQ_DEFAULT_USER: "root"  # Имя вашего пользователя
+      RABBITMQ_DEFAULT_PASS: "1234"  # Пароль вашего пользователя
